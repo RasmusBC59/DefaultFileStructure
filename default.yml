@@ -1,0 +1,13 @@
+instruments:
+  qdac:
+    type: qcodes.instrument_drivers.QDev.QDac_channels.QDac
+    address: ASRL4::INSTR
+    enable_forced_reconnect: true 
+    add_parameters: 
+      V1:
+        source: ch18.v
+        label: V1
+        unit: V
+        scale: 1e3
+        limits: [-2, 2]
+        monitor: true 
